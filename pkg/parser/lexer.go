@@ -573,6 +573,7 @@ func startWithSlash(s *Scanner) (tok int, pos Pos, lit string) {
 		currentCharIsStar = true
 
 	default:
+		isOptimizerHint = true
 	}
 
 	// standard C-like comment. read until we see '*/' then drop it.
